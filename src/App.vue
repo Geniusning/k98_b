@@ -6,7 +6,7 @@ export default {
     logs.unshift(Date.now())
     wx.setStorageSync('logs', logs)
 
-    console.log('app created and cache logs by setStorageSync')
+    console.log('你是我的眼')
   }
 }
 </script>
