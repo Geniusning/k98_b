@@ -5,8 +5,8 @@
     "pages/counter/main"
   ],
   "window": {
-    "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
+    "backgroundTextStyle": "black",
+    "navigationBarBackgroundColor": "black",
     "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle": "black"
   }

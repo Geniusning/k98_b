@@ -12,21 +12,24 @@
 
 <script>
 // Use Vuex
-import store from './store'
+import { mapMutations,mapGetters } from 'vuex' 
 
 export default {
   computed: {
-    count () {
-      return store.state.count
-    }
+    ...mapGetters(['count'])
   },
   methods: {
     increment () {
-      store.commit('increment')
+      // store.commit('increment');
+      this.addCount();
     },
     decrement () {
-      store.commit('decrement')
-    }
+     this.minusCount();
+    },
+    ...mapMutations({
+      addCount:"ADD",
+      minusCount:"MINUS"
+    })
   }
 }
 </script>
