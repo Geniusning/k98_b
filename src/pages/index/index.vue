@@ -18,13 +18,13 @@
       <input type="text" class="form-control" v-model="motto" placeholder="v-model" />
       <input type="text" class="form-control" v-model.lazy="motto" placeholder="v-model.lazy" />
     </form>
-    <a href="/pages/counter/main" class="counter">去往Vuex示例页面</a>
+    <a href="/pages/counter/main" class="counter">去往Vuex示例页面{{count}}</a>
   </div>
 </template>
 
 <script>
 import card from '@/components/card'
-
+import {mapGetters} from "vuex"
 export default {
   data () {
     return {
@@ -32,7 +32,9 @@ export default {
       userInfo: {}
     }
   },
-
+  computed:{
+    ...mapGetters(['count'])
+  },
   components: {
     card
   },
